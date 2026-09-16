@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LOVEFLIX | Birthday Special</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- AUDIO -->
+<!-- ========================= -->
+
+<audio id="bgMusic" loop>
+    <source src="Pastikan Riuh Akhiri Malammu - Perunggu.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- ========================= -->
+<!-- LOADING SCREEN -->
+<!-- ========================= -->
+
+<div id="loadingScreen">
+
+    <div class="netflix-logo">
+        LOVEFLIX
+    </div>
+
+    <p>Loading Birthday Story...</p>
+
+</div>
+
+
+<!-- ========================= -->
+<!-- PIN SCREEN -->
+<!-- ========================= -->
+
+<div id="pinScreen" class="hidden">
+
+    <div class="pin-box">
+
+        <h2>Birthday Episode 🔐</h2>
+
+        <p>Enter Access Code</p>
+
+        <input
+            type="password"
+            id="pinInput"
+            maxlength="4"
+            placeholder="••••"
+        >
+
+        <button onclick="checkPin()">
+            Continue
+        </button>
+
+        <span id="pinError"></span>
+
+    </div>
+
+</div>
+
+
+<!-- ========================= -->
+<!-- PROFILE SELECTION -->
+<!-- ========================= -->
+
+<div id="profileScreen" class="hidden">
+
+    <h1>Who's Watching?</h1>
+
+    <div class="profiles">
+
+        <div
+            class="profile-card"
+            onclick="enterLoveflix()"
+        >
+
+            <img
+                src="foto1.jpg"
+                alt="My Favorite Person"
+            >
+
+            <p>My Favorite Person ❤️</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ========================= -->
+<!-- MAIN APP -->
+<!-- ========================= -->
+
+<div id="mainApp" class="hidden">
+
+
+<!-- ========================= -->
+<!-- NAVBAR -->
+<!-- ========================= -->
+
+<nav>
+
+    <div class="logo">
+        LOVEFLIX
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="#hero">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="#continue">
+                Memories
+            </a>
+        </li>
+
+        <li>
+            <a href="#letter">
+                Birthday Letter
+            </a>
+        </li>
+
+        <li>
+            <a href="#quiz">
+                Quiz
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- ========================= -->
+<!-- HERO SECTION -->
+<!-- ========================= -->
+
+<section
+    id="hero"
+    class="hero"
+    style="background-image:url('foto1.jpg');"
+>
+
+<div class="overlay"></div>
+
+<div class="hero-content">
+
+    <span class="badge">
+        BIRTHDAY SPECIAL
+    </span>
+
+    <h1>
+        HAPPY BIRTHDAY,
+        MY FAVORITE PERSON
+    </h1>
+
+    <h3>
+        Birthday Special • Episode 01
+    </h3>
+
+    <p>
+        Another year of you,
+        another reason to celebrate you.
+        And I'm so lucky to be part
+        of your story.
+    </p>
+
+    <div class="hero-buttons">
+
+        <button class="play-btn">
+            ▶ Play Story
+        </button>
+
+        <button
+            class="info-btn"
+            onclick="scrollToSection('continue')"
+        >
+            More Memories
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- Hidden Heart #1 -->
+
+<div
+    class="hidden-heart"
+    onclick="collectHeart(this)"
+>
+    ❤️
+</div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- CONTINUE WATCHING -->
+<!-- ========================= -->
+
+<section
+    id="continue"
+    class="section"
+>
+
+<h2>
+    The Birthday Boy 🎂
+</h2>
+
+<div class="movie-row">
+
+
+<div class="movie-card">
+
+    <img
+        src="foto2.jpg"
+        alt="Birthday Memory 01"
+    >
+
+    <div class="movie-info">
+
+        <h3>
+            The Birthday Boy
+        </h3>
+
+        <p>
+            Photo #01
+        </p>
+
+    </div>
+
+</div>
+
+
+<div class="movie-card">
+
+    <img
+        src="foto3.jpg"
+        alt="Birthday Memory 02"
+    >
+
+    <div class="movie-info">
+
+        <h3>
+            My Favorite Person
+        </h3>
+
+        <p>
+            Photo #02
+        </p>
+
+    </div>
+
+</div>
+
+
+<div class="movie-card">
+
+    <img
+        src="foto4.jpg"
+        alt="Birthday Memory 03"
+    >
+
+    <div class="movie-info">
+
+        <h3>
+            The Boy I Adore
+        </h3>
+
+        <p>
+            Photo #03
+        </p>
+
+    </div>
+
+</div>
+
+
+<div class="movie-card">
+
+    <img
+        src="foto5.jpg"
+        alt="Birthday Memory 04"
+    >
+
+    <div class="movie-info">
+
+        <h3>
+            Just Him
+        </h3>
+
+        <p>
+            Photo #04
+        </p>
+
+    </div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- PHOTO GALLERY -->
+<!-- ========================= -->
+
+<section class="section">
+
+<h2>
+    Top Picks For My Favorite Person 😻
+</h2>
+
+<div class="grid-gallery">
+
+
+<div class="poster">
+    <img src="foto6.jpg" alt="Memory #05">
+</div>
+
+<div class="poster">
+    <img src="foto7.jpg" alt="Memory #06">
+</div>
+
+<div class="poster">
+    <img src="foto8.jpg" alt="Memory #07">
+</div>
+
+<div class="poster">
+    <img src="foto9.jpg" alt="Memory #08">
+</div>
+
+<div class="poster">
+    <img src="foto10.jpg" alt="Memory #09">
+</div>
+
+<div class="poster">
+    <img src="foto11.jpg" alt="Memory #10">
+</div>
+
+<div class="poster">
+    <img src="foto12.jpg" alt="Memory #11">
+</div>
+
+<div class="poster">
+    <img src="foto13.jpg" alt="Memory #12">
+</div>
+
+<div class="poster">
+    <img src="foto14.jpg" alt="Memory #13">
+</div>
+
+<div class="poster">
+    <img src="foto15.jpg" alt="Memory #14">
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- LOVE LETTER -->
+<!-- ========================= -->
+
+<section
+    id="letter"
+    class="section"
+>
+
+<h2>
+    Exclusive Birthday Episode 🎂
+</h2>
+
+<div class="letter-box">
+
+<h3>
+    Episode 01:
+    The Birthday Boy ❤️
+</h3>
+
+<p>
+
+Today is all about you.
+
+<br><br>
+
+Another year, another chapter,
+and another reason for me to be
+grateful that you exist.
+
+<br><br>
+
+Thank you for being you,
+for all the little things you do,
+the laughs you bring,
+and all the moments that somehow
+become my favorite memories.
+
+<br><br>
+
+I hope this new chapter brings you
+everything you've been working for,
+more happiness, more dreams coming true,
+and so many reasons to smile.
+
+<br><br>
+
+I'm really happy that I get to be here,
+celebrating another birthday with you.
+
+<br><br>
+
+Happy Birthday,
+my favorite person. ❤️
+
+</p>
+
+</div>
+
+
+<!-- Hidden Heart #2 -->
+
+<div
+    class="hidden-heart letter-heart"
+    onclick="collectHeart(this)"
+>
+    ❤️
+</div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- ACHIEVEMENT SYSTEM -->
+<!-- ========================= -->
+
+<section class="section">
+
+<h2>
+    Birthday Achievements 🏆
+</h2>
+
+<div class="achievement-box">
+
+<div
+    class="achievement"
+    id="ach1"
+>
+    ⬜ First Login
+</div>
+
+<div
+    class="achievement"
+    id="ach2"
+>
+    ⬜ Read The Birthday Letter
+</div>
+
+<div
+    class="achievement"
+    id="ach3"
+>
+    ⬜ Quiz Master
+</div>
+
+<div
+    class="achievement"
+    id="ach4"
+>
+    ⬜ Memory Hunter
+</div>
+
+<div
+    class="achievement"
+    id="ach5"
+>
+    ⬜ Hidden Heart Finder
+</div>
+
+<div
+    class="achievement"
+    id="ach6"
+>
+    ⬜ Birthday Surprise
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- MEMORY MATCH GAME -->
+<!-- ========================= -->
+
+<section
+    id="memoryGame"
+    class="section"
+>
+
+<h2>
+    Birthday Memory Match 🎂
+</h2>
+
+<p class="game-desc">
+    Match all cards to unlock
+    a birthday surprise.
+</p>
+
+<div class="memory-grid">
+
+
+<div
+    class="memory-card"
+    data-card="1"
+>
+
+    <div class="front">
+        ?
+    </div>
+
+    <div class="back">
+        🎂
+    </div>
+
+</div>
+
+
+<div
+    class="memory-card"
+    data-card="1"
+>
+
+    <div class="front">
+        ?
+    </div>
+
+    <div class="back">
+        🎂
+    </div>
+
+</div>
+
+
+<div
+    class="memory-card"
+    data-card="2"
+>
+
+    <div class="front">
+        ?
+    </div>
+
+    <div class="back">
+        🎁
+    </div>
+
+</div>
+
+
+<div
+    class="memory-card"
+    data-card="2"
+>
+
+    <div class="front">
+        ?
+    </div>
+
+    <div class="back">
+        🎁
+    </div>
+
+</div>
+
+
+<div
+    class="memory-card"
+    data-card="3"
+>
+
+    <div class="front">
+        ?
+    </div>
+
+    <div class="back">
+        😻
+    </div>
+
+</div>
+
+
+<div
+    class="memory-card"
+    data-card="3"
+>
+
+    <div class="front">
+        ?
+    </div>
+
+    <div class="back">
+        😻
+    </div>
+
+</div>
+
+
+</div>
+
+<div id="memoryResult"></div>
+
+
+<!-- Hidden Heart #3 -->
+
+<div
+    class="hidden-heart game-heart"
+    onclick="collectHeart(this)"
+>
+    ❤️
+</div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- SECRET EPISODE -->
+<!-- ========================= -->
+
+<section
+    class="section"
+    id="secretEpisode"
+>
+
+<h2>
+    Secret Episode 🔐
+</h2>
+
+<div class="secret-lock">
+
+<p>
+    Collect all hidden hearts
+    to unlock your birthday surprise.
+</p>
+
+<button
+    id="unlockBtn"
+    disabled
+>
+    Locked
+</button>
+
+</div>
+
+
+<div
+    id="secretContent"
+    class="hidden"
+>
+
+<img
+    src="foto15.jpg"
+    class="secret-photo"
+    alt="Birthday Surprise"
+>
+
+<h3>
+    Birthday Surprise 🎁
+</h3>
+
+<p>
+
+Behind every favorite memory,
+there's an us.
+
+And this is one of the moments
+I'll always keep close to my heart.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- QUIZ SECTION -->
+<!-- ========================= -->
+
+<section
+    id="quiz"
+    class="section"
+>
+
+<h2>
+    Birthday Boy Quiz 🎂
+</h2>
+
+<div class="quiz-box">
+
+<h3>
+    Who deserves all the love today?
+</h3>
+
+
+<button onclick="correctAnswer()">
+    You ❤️
+</button>
+
+
+<button onclick="wrongAnswer()">
+    Me
+</button>
+
+
+<button onclick="wrongAnswer()">
+    Both of Us
+</button>
+
+
+<div id="quizResult"></div>
+
+</div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- SEASON COMPLETION -->
+<!-- ========================= -->
+
+<section
+    id="seasonComplete"
+    class="section"
+>
+
+<h2>
+    Birthday Progress
+</h2>
+
+<div class="season-box">
+
+<div class="progress-bar">
+
+<div
+    id="seasonProgress"
+    class="progress-fill"
+>
+</div>
+
+</div>
+
+<p id="progressText">
+    0 / 6 Achievements Completed
+</p>
+
+<div id="seasonBadge">
+
+    🏆 Birthday Special Loading...
+
+</div>
+
+</div>
+
+
+<!-- Hidden Heart #4 -->
+
+<div
+    class="hidden-heart season-heart"
+    onclick="collectHeart(this)"
+>
+    ❤️
+</div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- ENDING CREDITS -->
+<!-- ========================= -->
+
+<section
+    id="credits"
+    class="credits-section"
+>
+
+<div class="credits-wrapper">
+
+<h1>
+    LOVEFLIX
+</h1>
+
+<p>
+    A Birthday Special
+</p>
+
+<br>
+
+
+<p>
+    Directed By
+</p>
+
+<h2>
+    Kiaa
+</h2>
+
+<br>
+
+
+<p>
+    Starring
+</p>
+
+<h2>
+    Zahran ❤️
+</h2>
+
+<br>
+
+
+<p>
+    Season
+</p>
+
+<h2>
+    01
+</h2>
+
+<br>
+
+
+<p>
+    Release Date
+</p>
+
+<h2>
+    17
+</h2>
+
+<br>
+
+
+<p>
+    Genre
+</p>
+
+<h2>
+    Romance • Comedy • Forever
+</h2>
+
+<br><br>
+
+
+<h1>
+    Thank You For Watching
+</h1>
+
+<h2>
+    His Birthday Special ❤️
+</h2>
+
+</div>
+
+
+<!-- Hidden Heart #5 -->
+
+<div
+    class="hidden-heart credits-heart"
+    onclick="collectHeart(this)"
+>
+    ❤️
+</div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- FINAL SCREEN -->
+<!-- ========================= -->
+
+<section
+    class="final-screen"
+>
+
+<div class="final-card">
+
+<h1>
+    🎂 Ready For Another Season?
+</h1>
+
+<p>
+    The story isn't over yet.
+    More memories are waiting
+    in the next chapter.
+</p>
+
+<button
+    onclick="renewSeason()"
+    class="renew-btn"
+>
+    YES ❤️
+</button>
+
+<div id="renewMessage"></div>
+
+</div>
+
+</section>
+
+
+</div>
+<!-- END MAIN APP -->
+
+
+<!-- ========================= -->
+<!-- CONFETTI -->
+<!-- ========================= -->
+
+<div id="confettiContainer"></div>
+
+
+<!-- ========================= -->
+<!-- FLOATING HEARTS -->
+<!-- ========================= -->
+
+<div class="floating-hearts">
+
+<span>❤️</span>
+<span>🎂</span>
+<span>❤️</span>
+<span>🎁</span>
+<span>😻</span>
+
+</div>
+
+
+<!-- ========================= -->
+<!-- POPUP ACHIEVEMENT -->
+<!-- ========================= -->
+
+<div
+    id="achievementPopup"
+    class="achievement-popup"
+>
+
+🏆 Achievement Unlocked!
+
+</div>
+
+
+<!-- ========================= -->
+<!-- SUCCESS SCREEN -->
+<!-- ========================= -->
+
+<div
+    id="seasonUnlocked"
+    class="season-unlocked hidden"
+>
+
+<div class="unlock-box">
+
+<h1>
+    🎂 BIRTHDAY SPECIAL COMPLETED
+</h1>
+
+<p>
+
+Congratulations!
+
+<br><br>
+
+You have completed
+all achievements and unlocked
+your birthday surprise.
+
+</p>
+
+<h3>
+    Thank You For Watching ❤️
+</h3>
+
+<button onclick="closeSeasonUnlocked()">
+    Continue
+</button>
+
+</div>
+
+</div>
+
+
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
+<footer>
+
+<p>
+    Made with ❤️ by Kiaa
+</p>
+
+</footer>
+
+
+<!-- ========================= -->
+<!-- SCRIPT -->
+<!-- ========================= -->
+
+<script src="script.js"></script>
+
+</body>
+  </html>
